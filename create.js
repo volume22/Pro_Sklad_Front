@@ -1,4 +1,4 @@
-function CreateProducts(){
+
 $(document).ready(function () {
     $("#1").submit(function (event) {
       event.preventDefault();
@@ -21,11 +21,9 @@ $(document).ready(function () {
   
     });
   });
-}
 
-function CreateOrders(){
   $(document).ready(function () {
-    $("form").submit(function (event) {
+    $(".ordercreate").submit(function (event) {
       var formData = {
         product_id: $("#product_id").val(),
         status: $("#status").val(),
@@ -44,10 +42,9 @@ function CreateOrders(){
       event.preventDefault();
     });
   });
-}
-function CreateProviders(){
+
   $(document).ready(function () {
-    $("form").submit(function (event) {
+    $(".procreate").submit(function (event) {
       var formData = {
         provider_name: $("#provider_name").val(),
       };
@@ -65,10 +62,9 @@ function CreateProviders(){
       event.preventDefault();
     });
   });
-}
-function CreateTransactions(){
+
   $(document).ready(function () {
-    $("form").submit(function (event) {
+    $(".transactionCreate").submit(function (event) {
       var formData = {
         product_id: $("#product_id").val(),
         sum: $("#sum").val(),
@@ -89,4 +85,3 @@ function CreateTransactions(){
       event.preventDefault();
     });
   });
-}

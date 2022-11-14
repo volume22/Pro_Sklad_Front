@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <script  src="node_modules/jquery/dist/jquery.js"></script>
     <script src="main2.js"></script>
-    <script src="form.js"></script> 
+    <script src="create.js"></script> 
     <script src="update.js"></script>
     <script src="Delete.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -22,31 +22,61 @@
            <br>
             <hr><hr><hr><hr>
             <div class="col-sm-6 col-sm-offset-3">
-              <form  method="POST">
-                <div id="name-group" class="form-group">
-                  <label for="provider_name">Provider_name</label>
-                  <input
+                 <form class="procreate" id="3">
+                 <div id="name-group" class="form-group">
+                   <label for="provider_name">Provider_name</label>
+                   <input
                     type="text"
                     class="form-control"
                     id="provider_name"
                     name="provider_name"
                     placeholder="provider_name"
-                  />
+                    />
                 </div>
-                <button type="submit" class="btn btn-success">
-                  Submit
-                </button>
-              </form>
-            </div>
-        </div>
+                  <button type="submit" class="btn btn-success">
+                    Create provider
+                  </button>
+               </form>
+              </div>
+             </div>
         <div>
-          <form >
+          <br><br><br>
+          <div class="col-sm-6 col-sm-offset-3">
+            <form class="proupdate" >
+              <div id="name-group" class="form-group">
+                <label for="provider_id">id</label>
+                <input
+                 type="text"
+                 class="form-control"
+                 id="provider_id"
+                 name="provider_id"
+                 placeholder="Id Update Info"
+                 />
+             </div>
+            <div id="name-group" class="form-group">
+              <label for="provider_name">Provider_name</label>
+              <input
+               type="text"
+               class="form-control"
+               id="provider_name_update"
+               name="provider_name"
+               placeholder="provider_name"
+               />
+           </div>
+             <button  class="btn btn-success">
+               Update provider
+             </button>
+          </form>
+         </div>
+        </div>
+   <div>
+          <form class="prodeleted">
           <div id="name-group" class="form-group">
             <label for="id">id</label>
             <input
               type="text"
               class="form-control"
-              id="id"
+              id="deleted_id"
               name="id"
               placeholder="id"
             />
@@ -57,7 +87,7 @@
         </form></div>
         <div class="btn-group">
           
-          <a href="file:///C:/Users/%D0%9A%D0%B5%D1%80%D0%B8%D0%BC%D1%85%D0%B0%D0%BD%D0%96/Desktop/FRONT/index.html" class="btn btn-primary">Back Index</a>
+          <a href="C:\FRONT\index.html" class="btn btn-primary">Back Index</a>
         </div>
 </body>
 

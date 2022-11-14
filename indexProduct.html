@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <script  src="node_modules/jquery/dist/jquery.js"></script>
     <script src="main2.js"></script>
-    <script src="form.js"></script>
+    <script src="create.js"></script> 
     <script src="update.js"></script> 
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -28,7 +28,7 @@
               </div> <div id="products" class="products"></div></div>
             <hr><hr><hr><hr>
             <div class="col-sm-6 col-sm-offset-3"> 
-              <form id="1" >
+              <form class="create" id="1">
                 <div id="name-group" class="form-group">
                   <label for="Type">Type</label>
                   <input
@@ -79,22 +79,31 @@
                     placeholder="price"
                   />
                 </div>
-                <button onclick="CreateProducts()" class="btn btn-success">
+                <button class="btn btn-success">
                   Submit
                 </button>
               </form>
-             
             </div>
-        <!-- </div>
+        </div>
           <hr><hr><hr><hr>
           <div class="col-sm-6 col-sm-offset-3">
-            <form>
-              <div id="name-group" class="form-group">
-                <label for="Type">Type</label>
+            <form class="update" id="1">
+              <div id="id-group" class="form-group">
+                <label for="id">ID update information</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="Type"
+                  id="id"
+                  name="id"
+                  placeholder="ID update information"
+                />
+              </div>
+              <div id="name-group" class="form-group">
+                <label for="type">Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="type"
                   name="Type"
                   placeholder="Type"
                 />
@@ -104,7 +113,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="provider_id"
+                  id="provider_update"
                   name="provider_id"
                   placeholder="provider_id"
                 />
@@ -114,7 +123,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="product_name"
+                  id="product_name_update"
                   name="product_name"
                   placeholder="product_name"
                 />
@@ -124,7 +133,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="description"
+                  id="description_update"
                   name="description"
                   placeholder="description"
                 />
@@ -134,16 +143,16 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="price"
+                  id="price_update"
                   name="price"
                   placeholder="price"
                 />
               </div>
-              <button type="submit" class="btn btn-success">
+              <button class="btn btn-success">
                 Update
               </button>
             </form>
-          </div> -->
+          </div>
       </div>
       <form >
         <div id="name-group" class="form-group">
@@ -151,9 +160,9 @@
           <input
             type="text"
             class="form-control"
-            id="id"
+            id="deleted_id"
             name="id"
-            placeholder="id"
+            placeholder="Deleted id"
           />
         </div>
        
@@ -163,7 +172,7 @@
       </form>
 
         <div class="btn-group">
-          <a href="file:///C:/Users/%D0%9A%D0%B5%D1%80%D0%B8%D0%BC%D1%85%D0%B0%D0%BD%D0%96/Desktop/FRONT/index.html" class="btn btn-primary">Back Index</a>
+          <a href="C:\FRONT\index.html" class="btn btn-primary">Back Index</a>
         </div> <script src="Delete.js"></script>
 </body>
 
