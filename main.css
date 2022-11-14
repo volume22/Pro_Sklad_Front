@@ -1,0 +1,14 @@
+.body{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    margin: 15px;
+}
+.qwerty{
+ 
+position: relative;
+width: 1920px;
+height: 1080px;
+
+background: #009E95;
+}
