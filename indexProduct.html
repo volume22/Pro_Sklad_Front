@@ -21,7 +21,7 @@
                   Type Products
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><button class="dropdown-item" onclick="GetProducts('Elektronika')"type="button">Electronika</button></li>
+                  <li><button class="dropdown-item" onclick="GetProducts('ElfBar')"type="button">Electronika</button></li>
                   <li><button class="dropdown-item" onclick="GetProducts('Bike')"type="button">Bike</button></li>
                   <li><button class="dropdown-item" onclick="GetProducts('XozVesh')"type="button">XozVesh </button></li>
                 </ul>
@@ -87,13 +87,13 @@
         </div>
           <hr><hr><hr><hr>
           <div class="col-sm-6 col-sm-offset-3">
-            <form class="update" id="1">
+            <form class="updateProduct" id="1">
               <div id="id-group" class="form-group">
                 <label for="id">ID update information</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="id"
+                  id="id_update"
                   name="id"
                   placeholder="ID update information"
                 />
@@ -154,9 +154,9 @@
             </form>
           </div>
       </div>
-      <form >
+      <form class="deletedProduct" >
         <div id="name-group" class="form-group">
-          <label for="id">id</label>
+          <label for="deleted_id">id</label>
           <input
             type="text"
             class="form-control"
@@ -167,12 +167,12 @@
         </div>
        
         <button type="submit" class="btn btn-success" >
-          Submit
+          Deleted id
         </button>
       </form>
 
         <div class="btn-group">
-          <a href="C:\FRONT\index.html" class="btn btn-primary">Back Index</a>
+          <a href="/index.html" class="btn btn-primary">Back Index</a>
         </div> <script src="Delete.js"></script>
 </body>
 

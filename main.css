@@ -12,3 +12,7 @@ height: 1080px;
 
 background: #009E95;
 }
+#main{
+    padding:15px;
+    border: 10px;
+}

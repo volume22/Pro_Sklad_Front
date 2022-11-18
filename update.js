@@ -1,79 +1,71 @@
 $(document).ready(function () {
-      $(".update#1").submit(function (event) {
-        event.preventDefault();
-        // var formDate={
-         
-        // };
-        var formData = {
-          Type: $("#type").val(),
-           id: $("#id").val(),
-          provider_id: $("#provider_update").val(),
-          product_name: $("#product_name_update").val(),
-          description: $("#description_update").val(),
-          price: $("#price_update").val(),
-        };
-          if (jQuery.isFunction(formData)) {
+  $(".updateProduct").submit(function (event) {
+      event.preventDefault();
+      var formData = {
+        Type: $("#type").val(),
+        id: $("#id_update").val(),
+        provider_id: $("#provider_update").val(),
+        product_name: $("#product_name_update").val(),
+        description: $("#description_update").val(),
+        price: $("#price_update").val(),
+      };
+      if (jQuery.isFunction(formData)) {
               callback = formData;
               formData = {};
-          }
-          return jQuery.ajax({
-              type: 'PUT',
-              url: 'http://127.0.0.1:8000/api/product/'+formData.id,
-              data: formData,
-              success: true,
-             
-              });
-      
+      }
+      return jQuery.ajax({
+        type: 'PUT',
+        url: 'http://127.0.0.1:8000/api/product/'+formData.id,
+        data: formData,
+        success: true,  
       });
-    });
+  });
+});
 
 $(document).ready(function () {
-      $(".updateOrder").submit(function (event) {
-        debugger
-        event.preventDefault();
-        var formData = {
-          id:$("#id").val(),
-          product_id: $("#product_id_update").val(),
-         status: $("#status_update").val(),
-        };
-          if (jQuery.isFunction(formData)) {
-              callback = formData;
-              formData = {};
-          }
-          return jQuery.ajax({
-              type: 'PUT',
-              url: 'http://127.0.0.1:8000/api/order/'+formData.id,
-              data: formData,
-              success: true,
-              });
-      
-      });
-    });
+  $(".updateOrder").submit(function (event) {
+      event.preventDefault();
+      var formData = {
+        id:$("#id").val(),
+        product_id: $("#product_id_update").val(),
+        status: $("#status_update").val(),
+      };
+      if (jQuery.isFunction(formData)) {
+        callback = formData;
+        formData = {};
+      }
+      return jQuery.ajax({
+        type: 'PUT',
+        url: 'http://127.0.0.1:8000/api/order/'+formData.id,
+        data: formData,
+        success: true,
+      });  
+  });
+ });
 
     $(document).ready(function () {
       $(".proupdate").submit(function (event) {
         event.preventDefault();
         var formData = {
-          id: $("#provider_id").val(),
-          provider_name: $("#provider_name_update").val(),
+            id: $("#provider_id").val(),
+            provider_name: $("#provider_name_update").val(),
         };
-          if (jQuery.isFunction(formData)) {
-              callback = formData;
-              formData = {};
-          }
-          return jQuery.ajax({
-              type: 'PUT',
-              url: 'http://127.0.0.1:8000/api/provider/'+formData.id,
-              data: formData,
-              success: true
-              });
-        });
+        if (jQuery.isFunction(formData)) {
+            callback = formData;
+            formData = {};
+        }
+        return jQuery.ajax({
+            type: 'PUT',
+            url: 'http://127.0.0.1:8000/api/provider/'+formData.id,
+            data: formData,
+            success: true
+          });
+      });
     });
 
       
     $(document).ready(function () {
       $(".transactionUpdate").submit(function (event) {
-        debugger
         event.preventDefault();
         var formData = {
           id: $("#transaction_id").val(),
@@ -82,17 +74,17 @@ $(document).ready(function () {
           payment_for_goods: $("#payment_for_goods_update").val(),
           order_id: $("#order_id_update").val()
         };
-          if (jQuery.isFunction(formData)) {
-              callback = formData;
-              formData = {};
-          }
-          return jQuery.ajax({
-              type: 'PUT',
-              url: 'http://127.0.0.1:8000/api/transaction/'+formData.id,
-              data: formData,
-              success: true
-              });
+        if (jQuery.isFunction(formData)) {
+          callback = formData;
+          formData = {};
+        }
+        return jQuery.ajax({
+          type: 'PUT',
+          url: 'http://127.0.0.1:8000/api/transaction/'+formData.id,
+          data: formData,
+          success: true
         });
+      });
     });
 
 
