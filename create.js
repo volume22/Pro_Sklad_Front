@@ -1,6 +1,6 @@
 
   $(document).ready(function () {
-    $("#1").submit(function (event) {
+    $(".createproduct").submit(function (event) {
       event.preventDefault();
       var formData = {
         Type: $("#Type").val(),

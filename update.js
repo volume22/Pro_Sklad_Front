@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  $(".updateProduct").submit(function (event) {
+  $(".updateproduct").submit(function (event) {
       event.preventDefault();
       var formData = {
-        Type: $("#type").val(),
+        Type: $("#Type_update").val(),
         id: $("#id_update").val(),
-        provider_id: $("#provider_update").val(),
+        provider_id: $("#provider_id_update").val(),
         product_name: $("#product_name_update").val(),
         description: $("#description_update").val(),
         price: $("#price_update").val(),

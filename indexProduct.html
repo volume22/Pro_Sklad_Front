@@ -23,12 +23,13 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><button class="dropdown-item" onclick="GetProducts('ElfBar')"type="button">Electronika</button></li>
                   <li><button class="dropdown-item" onclick="GetProducts('Bike')"type="button">Bike</button></li>
-                  <li><button class="dropdown-item" onclick="GetProducts('XozVesh')"type="button">XozVesh </button></li>
+                  <li><button class="dropdown-item" onclick="GetProducts('Accesories')"type="button">Accesories </button></li>
+                  <li><button class="dropdown-item" onclick="GetProducts('Shoes')"type="button">Shoes </button></li>
                 </ul>
               </div> <div id="products" class="products"></div></div>
             <hr><hr><hr><hr>
-            <div class="col-sm-6 col-sm-offset-3"> 
-              <form class="create" id="1">
+            <!-- <div class="col-sm-6 col-sm-offset-3"> 
+              <form class="createproduct" id="1">
                 <div id="name-group" class="form-group">
                   <label for="Type">Type</label>
                   <input
@@ -83,11 +84,156 @@
                   Submit
                 </button>
               </form>
-            </div>
+            </div> -->
         </div>
-          <hr><hr><hr><hr>
+          <div class="styleDiv">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Create Product
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <form class="createproduct" >
+                      <div class="col-sm-3 mb-3">
+                        <label for="Type">Type</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="Type"
+                          name="Type"
+                          placeholder="Type"
+                        />
+                      </div>
+                      <div id="email-group" class="form-group">
+                        <label for="provider_id">provider_id</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="provider_id"
+                          name="provider_id"
+                          placeholder="provider_id"
+                        />
+                      </div>
+                      <div id="product_name-group" class="form-group">
+                        <label for="product_name">product_name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="product_name"
+                          name="product_name"
+                          placeholder="product_name"
+                        />
+                      </div>
+                      <div id="description-group" class="form-group">
+                        <label for="description">description</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="description"
+                          name="description"
+                          placeholder="description"
+                        />
+                      </div>
+                      <div id="description-group" class="form-group">
+                        <label for="price">price</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="price"
+                          name="price"
+                          placeholder="price"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="style">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                    Update Product
+                  </button>
+                </h2>
+                <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <form class="updateproduct">
+                      <div class="col-sm-3 mb-3">
+                        <label for="id">ID update information</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="id_update"
+                  name="id"
+                  placeholder="ID update information"
+                />
+              </div>
+              <div id="name-group" class="form-group">
+                <label for="Type">Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Type_update"
+                  name="Type"
+                  placeholder="Type"
+                />
+              </div>
+              <div id="email-group" class="form-group">
+                <label for="provider_id">provider_id</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="provider_id_update"
+                  name="provider_id"
+                  placeholder="provider_id"
+                />
+              </div>
+              <div id="product_name-group" class="form-group">
+                <label for="product_name">product_name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="product_name_update"
+                  name="product_name"
+                  placeholder="product_name"
+                />
+              </div>
+              <div id="description-group" class="form-group">
+                <label for="description">description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="description_update"
+                  name="description"
+                  placeholder="description"
+                />
+              </div>
+              <div id="description-group" class="form-group">
+                <label for="price">price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="price_update"
+                  name="price"
+                  placeholder="price"
+                />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
           <div class="col-sm-6 col-sm-offset-3">
-            <form class="updateProduct" id="1">
+            <form class="updateproduct" id="1">
               <div id="id-group" class="form-group">
                 <label for="id">ID update information</label>
                 <input
@@ -103,7 +249,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="type"
+                  id="Type"
                   name="Type"
                   placeholder="Type"
                 />
@@ -172,7 +318,7 @@
       </form>
 
         <div class="btn-group">
-          <a href="/index.html" class="btn btn-primary">Back Index</a>
+          <a href="index.html" class="btn btn-primary">Back Index</a>
         </div> <script src="Delete.js"></script>
 </body>
 
