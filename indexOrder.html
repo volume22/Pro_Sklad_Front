@@ -16,11 +16,15 @@
 </head>
 <body>
     <div id="main">
-            <button type="button" class="btn btn-outline-primary" onclick="GetOrders()" >GetOrders
-            <div class="OrdersDiv">  <div id="orders" class="orders"></div></div>
+            <button type="button" class="btn btn-outline-primary" onclick="GetOrdersByPayed()" >GetOrdersByPayed
+            <div class="OrdersDiv">  <div id="ordersbypayed" class="orders"></div></div>
             </button>
+            <button type="button" class="btn btn-outline-primary" onclick="GetOrdersByNotPayed()" >GetOrdersByNotPayed
+              <div class="OrdersDiv">  <div id="ordersbynotpayed" class="orders"></div></div>
+              </button>
            <br>
             <hr><hr><hr><hr>
+            <p>Create Order</p>
             <div class="col-sm-6 col-sm-offset-3">
               <form class="ordercreate" id="2">
                 <div id="name-group" class="form-group">

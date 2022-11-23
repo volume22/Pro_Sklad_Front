@@ -1,10 +1,10 @@
-function GetOrders(){
+function GetOrdersByPayed(){
 $(document).ready(function () {
   $.ajax({
-    url: "http://127.0.0.1:8000/api/orders",
+    url: "http://127.0.0.1:8000/api/ordersp",
     dataType: "json"
   }).done(function(response) {
-    let ordersDiv = $("#orders");
+    let ordersDiv = $("#ordersbypayed");
     console.log(response.data);
     $.each(response.data, function(i, order) {
       ordersDiv.append('<p> Status ' + order.status + '</p>');
@@ -16,6 +16,24 @@ $(document).ready(function () {
   });
 });
 }
+function GetOrdersByNotPayed(){
+  $(document).ready(function () {
+    $.ajax({
+      url: "http://127.0.0.1:8000/api/ordersn",
+      dataType: "json"
+    }).done(function(response) {
+      let ordersDiv = $("#ordersbynotpayed");
+      console.log(response.data);
+      $.each(response.data, function(i, order) {
+        ordersDiv.append('<p> Status ' + order.status + '</p>');
+        $.each(order.products, function(i, orderProduct) {
+          console.log(orderProduct);
+          ordersDiv.append('<p>' + orderProduct + '</p>');
+        });
+      });
+    });
+  });
+  }
 function GetProducts(Type){
 $(document).ready(function () {
   $.ajax({
@@ -56,7 +74,7 @@ $(document).ready(function () {
 function GetTransactions(){
 $(document).ready(function () {
     $.ajax({
-      url: "http://127.0.0.1:8000/api/transactions?page=2",
+      url: "http://127.0.0.1:8000/api/transactions",
       dataType: "json"
     }).done(function(response) {
       let OrdersDiv = $("#transactions");
@@ -66,6 +84,10 @@ $(document).ready(function () {
         $.each(transaction.products, function(i, tranProduct) {
           console.log(tranProduct);
           OrdersDiv.append('<p>' + tranProduct + '</p>');
+          $.each(tranProduct.orders, function(i, tranOrder) {
+            console.log(tranOrder);
+            OrdersDiv.append('<p>' + tranOrder + '</p>');
+          });
         });
       });
     });
