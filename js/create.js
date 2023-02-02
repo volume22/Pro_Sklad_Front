@@ -1,5 +1,5 @@
 
-  $(document).ready(function () {
+  $(document).ready(function (request) {
     $(".createproduct").submit(function (event) {
       event.preventDefault();
       var formData = {
@@ -64,7 +64,7 @@
   });
 
   $(document).ready(function () {
-    $(".transactionCreate").submit(function (event) {
+    $("#transactionCreate").submit(function (event) {
       var formData = {
         product_id: $("#product_id").val(),
         sum: $("#sum").val(),

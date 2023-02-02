@@ -2,8 +2,8 @@ $(document).ready(function () {
   $(".updateproduct").submit(function (event) {
       event.preventDefault();
       var formData = {
-        Type: $("#Type_update").val(),
         id: $("#id_update").val(),
+        Type: $("#Type_update").val(),
         provider_id: $("#provider_id_update").val(),
         product_name: $("#product_name_update").val(),
         description: $("#description_update").val(),
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
       
     $(document).ready(function () {
-      $(".transactionUpdate").submit(function (event) {
+      $("#transactionUpdate").submit(function (event) {
         event.preventDefault();
         var formData = {
           id: $("#transaction_id").val(),
@@ -80,7 +80,7 @@ $(document).ready(function () {
         }
         return jQuery.ajax({
           type: 'PUT',
-          url: 'http://127.0.0.1:8000/api/transaction/'+formData.id,
+          url: 'http://127.0.0.1:8000/api/transactions/'+formData.id,
           data: formData,
           success: true
         });

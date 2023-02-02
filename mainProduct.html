@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="controllermain.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/main2.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/Delete.js"></script>
+    <script src="js/like.js"></script>
+    <script src="update.js"></script>
+    <link rel="stylesheet" href="node_modules/jquery/dist/jquery.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<h1>
+  <div class="header"><a href="mainindex.html"><p class="textheader">Sklad.por</p> </a>    
+    <img id="firstimage" src="image/package (2).png" alt="png">
+</div>
+</h1>
+<body>
+    <div class="leftmenu">
+        <div class="leftorder">
+            <a href="mainOrder.html" ><img src="image/order-now.png" alt="png" ></a>
+        </div>
+        <div class="leftproduct">
+            <a href="mainProduct.html" ><img src="image/box (1).png" alt="png" ></a>
+        </div>
+        <div class="leftprovider">
+            <a href="mainProvider.html" ><img src="image/share.png" alt="png" ></a>
+        </div>
+        <div class="lefttransaction">
+            <a href="mainTransaction.html" ><img src="image/transaction.png" alt="png" ></a>
+        </div>
+        <div class="backmenu">
+            <a href="mainindex.html" ><img src="image/left-arrow.png" alt="png" ></a>
+        </div>
+    </div>
+    <div class="main">
+      <div id="main">
+        <div class="ProductsDiv"><div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Type Products
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><button class="dropdown-item" onclick="GetProducts('ElfBar')"type="button">Electronika</button></li>
+              <li><button class="dropdown-item" onclick="GetProducts('Bike')"type="button">Bike</button></li>
+              <li><button class="dropdown-item" onclick="GetProducts('Accesories')"type="button">Accesories </button></li>
+              <li><button class="dropdown-item" onclick="GetProducts('Shoes')"type="button">Shoes </button></li>
+            </ul>
+          </div> <div id="products" class="products"></div></div>
+        <hr><hr><hr><hr>
+      </div>
+      <form class="up" id="likecreate">
+        <div id="name-group" class="form-group">
+          <label for="product_id">id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product_id"
+            placeholder="id product"
+          />
+        </div>
+        <div id="name-group" class="form-group">
+          <label for="like">like</label>
+          <input
+            type="text"
+            class="form-control"
+            id="like"
+            placeholder="id product"
+          />
+        </div>
+        <button type="submit" class="btn btn-success" >
+           Liked Product
+        </button>
+      </form>
+      
+        <!-- <div class="col-sm-6 col-sm-offset-3"> 
+          <form class="createproduct" id="1">
+            <div id="name-group" class="form-group">
+              <label for="Type">Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Type"
+                name="Type"
+                placeholder="Type"
+              />
+            </div>
+            <div id="email-group" class="form-group">
+              <label for="provider_id">provider_id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="provider_id"
+                name="provider_id"
+                placeholder="provider_id"
+              />
+            </div>
+            <div id="product_name-group" class="form-group">
+              <label for="product_name">product_name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="product_name"
+                name="product_name"
+                placeholder="product_name"
+              />
+            </div>
+            <div id="description-group" class="form-group">
+              <label for="description">description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                name="description"
+                placeholder="description"
+              />
+            </div>
+            <div id="description-group" class="form-group">
+              <label for="price">price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                name="price"
+                placeholder="price"
+              />
+            </div>
+            <button class="btn btn-success">
+              Submit
+            </button>
+          </form>
+        </div> -->
+    <!-- </div> -->
+      <div class="styleDiv">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Create Product
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <form class="createproduct" >
+                  <div class="col-sm-3 mb-3">
+                    <label for="Type">Type</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Type"
+                      name="Type"
+                      placeholder="Type"
+                    />
+                  </div>
+                  <div id="email-group" class="form-group">
+                    <label for="provider_id">provider_id</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="provider_id"
+                      name="provider_id"
+                      placeholder="provider_id"
+                    />
+                  </div>
+                  <div id="product_name-group" class="form-group">
+                    <label for="product_name">product_name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="product_name"
+                      name="product_name"
+                      placeholder="product_name"
+                    />
+                  </div>
+                  <div id="description-group" class="form-group">
+                    <label for="description">description</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="description"
+                      name="description"
+                      placeholder="description"
+                    />
+                  </div>
+                  <div id="description-group" class="form-group">
+                    <label for="price">price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="price"
+                      name="price"
+                      placeholder="price"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="style">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                Update Product
+              </button>
+            </h2>
+            <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <form class="updateproduct">
+                  <div class="col-sm-3 mb-3">
+                    <label for="id">ID update information</label>
+            <input
+              type="text"
+              class="form-control"
+              id="id_update"
+              name="id"
+              placeholder="ID update information"
+            />
+          </div>
+          <div id="name-group" class="form-group">
+            <label for="Type">Type</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Type_update"
+              name="Type"
+              placeholder="Type"
+            />
+          </div>
+          <div id="email-group" class="form-group">
+            <label for="provider_id">provider_id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="provider_id_update"
+              name="provider_id"
+              placeholder="provider_id"
+            />
+          </div>
+          <div id="product_name-group" class="form-group">
+            <label for="product_name">product_name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="product_name_update"
+              name="product_name"
+              placeholder="product_name"
+            />
+          </div>
+          <div id="description-group" class="form-group">
+            <label for="description">description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description_update"
+              name="description"
+              placeholder="description"
+            />
+          </div>
+          <div id="description-group" class="form-group">
+            <label for="price">price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="price_update"
+              name="price"
+              placeholder="price"
+            />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="up"><div class="col-sm-6 col-sm-offset-3">
+        <form class="updateproduct" id="updateproduct">
+          <div id="id-group" class="form-group">
+            <label for="id">ID update information</label>
+              <input
+                type="text"
+                class="form-control"
+                id="id_update"
+                name="id"
+                placeholder="ID update information"
+              />
+          </div>
+          <div id="name-group" class="form-group">
+            <label for="type">Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Type_update"
+                name="Type"
+                placeholder="Type"
+              />
+          </div>
+          <div id="email-group" class="form-group">
+            <label for="provider_id">provider_id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="provider_id_update"
+                name="provider_id"
+                placeholder="provider_id"
+              />
+          </div>
+          <div id="product_name-group" class="form-group">
+            <label for="product_name">product_name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="product_name_update"
+                name="product_name"
+                 placeholder="product_name"
+              />
+          </div>
+          <div id="description-group" class="form-group">
+            <label for="description">description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description_update"
+                name="description"
+                 placeholder="description"
+              />
+          </div>
+          <div id="description-group" class="form-group">
+            <label for="price">price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price_update"
+                name="price"
+                placeholder="price"
+              />
+          </div>
+          <button class="btn btn-success">
+                Update
+          </button>
+        </form>
+      </div>
+      <form class="deletedProduct" >
+        <div id="name-group" class="form-group">
+          <label for="deleted_id">id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="deleted_id"
+            name="id"
+            placeholder="Deleted id"
+          />
+        </div>
+       
+        <button type="submit" class="btn btn-success" >
+          Deleted id
+        </button>
+      </form>
+      </div>
+      
+    
+        
+      </div>
+    </div>
+  
+        <script src="js/Delete.js"></script>
+</body>
+
+</html>

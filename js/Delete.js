@@ -47,7 +47,7 @@ $(document).ready(function (response) {
   });
     
   $(document).ready(function (response) {
-    $(".TransactionDelete").submit(function (event) {
+    $("#TransactionDelete").submit(function (event) {
         event.preventDefault();
         var formData = {
             id: $("#id_deleted").val(),

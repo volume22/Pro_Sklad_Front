@@ -1,28 +1,28 @@
-function GetOrdersByPayed(){
-$(document).ready(function () {
-  $.ajax({
-    url: "http://127.0.0.1:8000/api/ordersp",
-    dataType: "json"
-  }).done(function(response) {
-    let ordersDiv = $("#ordersbypayed");
-    console.log(response.data);
-    $.each(response.data, function(i, order) {
-      ordersDiv.append('<p> Status ' + order.status + '</p>');
-      $.each(order.products, function(i, orderProduct) {
-        console.log(orderProduct);
-        ordersDiv.append('<p>' + orderProduct + '</p>');
-      });
-    });
-  });
-});
-}
-function GetOrdersByNotPayed(){
+// function GetOrdersByPayed(){
+// $(document).ready(function () {
+//   $.ajax({
+//     url: "http://127.0.0.1:8000/api/ordersp",
+//     dataType: "json"
+//   }).done(function(response) {
+//     let ordersDiv = $("#ordersbypayed");
+//     console.log(response.data);
+//     $.each(response.data, function(i, order) {
+//       ordersDiv.append('<p> Status ' + order.status + '</p>');
+//       $.each(order.products, function(i, orderProduct) {
+//         console.log(orderProduct);
+//         ordersDiv.append('<p>' + orderProduct + '</p>');
+//       });
+//     });
+//   });
+// });
+// }
+function GetOrder(){
   $(document).ready(function () {
     $.ajax({
-      url: "http://127.0.0.1:8000/api/ordersn",
+      url: "http://127.0.0.1:8000/api/orders",
       dataType: "json"
     }).done(function(response) {
-      let ordersDiv = $("#ordersbynotpayed");
+      let ordersDiv = $("#ordersbypayed");
       console.log(response.data);
       $.each(response.data, function(i, order) {
         ordersDiv.append('<p> Status ' + order.status + '</p>');
@@ -34,6 +34,24 @@ function GetOrdersByNotPayed(){
     });
   });
   }
+// function GetOrdersByNotPayed(){
+//   $(document).ready(function () {
+//     $.ajax({
+//       url: "http://127.0.0.1:8000/api/ordersn",
+//       dataType: "json"
+//     }).done(function(response) {
+//       let ordersDiv = $("#ordersbynotpayed");
+//       console.log(response.data);
+//       $.each(response.data, function(i, order) {
+//         ordersDiv.append('<p> Status ' + order.status + '</p>');
+//         $.each(order.products, function(i, orderProduct) {
+//           console.log(orderProduct);
+//           ordersDiv.append('<p>' + orderProduct + '</p>');
+//         });
+//       });
+//     });
+//   });
+//   }
 function GetProducts(Type){
 $(document).ready(function () {
   $.ajax({
